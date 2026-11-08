@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform?style=for-the-badge&logo=star&color=ffb703" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform?style=for-the-badge&logo=star&color=ffb703" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform?style=for-the-badge&logo=git&color=219ebc" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform?style=for-the-badge&color=8ecae6" alt="Issues" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Webinar-Virtual-Event-Platform/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey?style=for-the-badge" alt="License" /></a>
@@ -58,7 +58,7 @@ Commercial, cloud-hosted Webinar and Virtual Event platforms sorted by company s
 
 ## 🔓 Open-Source Software 💻
 
-Self-hosted, community-driven Webinar and Virtual Event platforms, ranked by GitHub stars (descending). All listed projects offer source code you can deploy on your own infrastructure.
+Self-hosted, community-driven Webinar and Virtual Event platforms, ranked by GitHub_Stars (descending). All listed projects offer source code you can deploy on your own infrastructure.
 
 ### 1. 🌟 Jitsi Meet [![Stars](https://img.shields.io/github/stars/jitsi/jitsi-meet?style=social&color=white)](https://github.com/jitsi/jitsi-meet/stargazers)
 - **Repository:** [jitsi/jitsi-meet](https://github.com/jitsi/jitsi-meet)
