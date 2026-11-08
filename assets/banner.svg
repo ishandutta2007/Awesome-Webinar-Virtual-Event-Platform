@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <!-- Glowing Accents -->
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Filters for Glow -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .glow-orb-1 {
+        animation: floatOrb 10s ease-in-out infinite alternate;
+      }
+      .glow-orb-2 {
+        animation: floatOrb2 12s ease-in-out infinite alternate;
+      }
+      .wave-line-1 {
+        animation: dashWave 16s linear infinite;
+      }
+      .pulse-pill {
+        animation: pulsePill 4s ease-in-out infinite alternate;
+      }
+      .signal-circle {
+        animation: signalPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        transform-origin: center;
+      }
+      .floating-card-1 {
+        animation: cardFloat1 6s ease-in-out infinite alternate;
+      }
+      .floating-card-2 {
+        animation: cardFloat2 7s ease-in-out infinite alternate;
+      }
+
+      @keyframes floatOrb {
+        0% { transform: translate(0px, 0px) scale(1); }
+        100% { transform: translate(80px, 40px) scale(1.15); }
+      }
+      @keyframes floatOrb2 {
+        0% { transform: translate(0px, 0px) scale(1); }
+        100% { transform: translate(-60px, -30px) scale(1.2); }
+      }
+      @keyframes dashWave {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 1000; }
+      }
+      @keyframes pulsePill {
+        0% { opacity: 0.75; transform: translateY(0); }
+        100% { opacity: 1; transform: translateY(-4px); }
+      }
+      @keyframes signalPulse {
+        0% { r: 6; opacity: 1; }
+        50% { r: 16; opacity: 0.3; }
+        100% { r: 24; opacity: 0; }
+      }
+      @keyframes cardFloat1 {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-10px); }
+      }
+      @keyframes cardFloat2 {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(12px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="400" fill="url(#bg-grad)" rx="16" />
+
+  <!-- Background Animated Glow Orbs -->
+  <g opacity="0.45">
+    <circle class="glow-orb-1" cx="220" cy="100" r="130" fill="#38bdf8" filter="url(#glow-cyan)" />
+    <circle class="glow-orb-2" cx="980" cy="300" r="160" fill="#a855f7" filter="url(#glow-purple)" />
+    <circle cx="600" cy="380" r="110" fill="#ec4899" opacity="0.3" filter="url(#glow-purple)" />
+  </g>
+
+  <!-- Technical Grid Pattern Background -->
+  <g opacity="0.07" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="80" x2="1200" y2="80" />
+    <line x1="0" y1="160" x2="1200" y2="160" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="320" x2="1200" y2="320" />
+    <line x1="150" y1="0" x2="150" y2="400" />
+    <line x1="300" y1="0" x2="300" y2="400" />
+    <line x1="450" y1="0" x2="450" y2="400" />
+    <line x1="600" y1="0" x2="600" y2="400" />
+    <line x1="750" y1="0" x2="750" y2="400" />
+    <line x1="900" y1="0" x2="900" y2="400" />
+    <line x1="1050" y1="0" x2="1050" y2="400" />
+  </g>
+
+  <!-- Streaming Data Waves (Background Layer) -->
+  <path class="wave-line-1" d="M -50 320 Q 300 180, 600 290 T 1250 210" fill="none" stroke="url(#accent-cyan)" stroke-width="3" stroke-dasharray="12 8" opacity="0.4" />
+  <path class="wave-line-1" d="M -50 260 Q 350 350, 700 240 T 1250 290" fill="none" stroke="url(#accent-purple)" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.35" />
+
+  <!-- Background Decorative Floating Cards (Behind main text) -->
+  <g class="floating-card-1" opacity="0.4">
+    <rect x="70" y="270" width="160" height="60" rx="10" fill="url(#card-grad)" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="95" cy="300" r="5" fill="#10b981" />
+    <text x="110" y="304" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">WebRTC SFU</text>
+  </g>
+  <g class="floating-card-2" opacity="0.4">
+    <rect x="970" y="70" width="170" height="60" rx="10" fill="url(#card-grad)" stroke="#c084fc" stroke-width="1" />
+    <circle cx="995" cy="100" r="5" fill="#f43f5e" />
+    <text x="1010" y="104" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">RTMP Live Stream</text>
+  </g>
+
+  <!-- Live Pulse Broadcast Indicator -->
+  <g transform="translate(600, 75)">
+    <circle class="signal-circle" cx="0" cy="0" r="10" fill="none" stroke="#ef4444" stroke-width="2" />
+    <circle cx="0" cy="0" r="6" fill="#ef4444" />
+    <text x="16" y="5" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" letter-spacing="2">LIVE BROADCAST &amp; VIRTUAL EVENTS</text>
+  </g>
+
+  <!-- FOREGROUND: Clean, High-Contrast Title & Subtitle (Always in Front) -->
+  <!-- Top Badge / Category -->
+  <g class="pulse-pill" transform="translate(425, 110)">
+    <rect width="350" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="175" y="21" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">⚡ CURATED AWESOME ECOSYSTEM</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="600" y="210" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="900" fill="#ffffff" letter-spacing="-1">
+    Webinar &amp; Virtual Event Platforms
+  </text>
+
+  <!-- Highlight Gradient Underline -->
+  <rect x="420" y="228" width="360" height="4" rx="2" fill="url(#accent-cyan)" />
+
+  <!-- Subtitle -->
+  <text x="600" y="270" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
+    Enterprise SaaS Leaders &bull; Open-Source WebRTC &bull; Self-Hosted Broadcasting
+  </text>
+
+  <!-- Interactive Tag Pills (Foreground Bottom) -->
+  <g transform="translate(240, 315)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="130" height="30" rx="15" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <text x="65" y="19" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🌐 WebRTC SFU</text>
+
+    <!-- Pill 2 -->
+    <rect x="145" y="0" width="130" height="30" rx="15" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <text x="210" y="19" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">📡 Live Streaming</text>
+
+    <!-- Pill 3 -->
+    <rect x="290" y="0" width="140" height="30" rx="15" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <text x="360" y="19" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🏢 Enterprise SaaS</text>
+
+    <!-- Pill 4 -->
+    <rect x="445" y="0" width="135" height="30" rx="15" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <text x="512" y="19" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🎓 Virtual Classroom</text>
+
+    <!-- Pill 5 -->
+    <rect x="595" y="0" width="130" height="30" rx="15" fill="#0f172a" stroke="#475569" stroke-width="1" />
+    <text x="660" y="19" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🔒 Self-Hosted</text>
+  </g>
+</svg>
